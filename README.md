@@ -22,7 +22,7 @@ Autonomy in the sense of technical systems represents a system property characte
 
 The ASTE Framework is built on a robust and flexible architecture that allows for seamless integration with various autonomous systems. The logical architecture is illustrated in the figure below:
 
-![ASTE Framework Architecture](figures/ASTE_Architecture.pdf)
+![ASTE Framework Architecture](figures/ASTE_Architecture.png)
 
 The framework is designed to support a modular and extensible structure, making it adaptable to different autonomous applications. The architecture comprises key components for sensor integration, decision-making algorithms, and actuators, facilitating the autonomous operation of process plants.
 
@@ -32,7 +32,7 @@ The framework is designed to support a modular and extensible structure, making 
 
 To demonstrate the capabilities of the ASTE Framework, an exemplary use case involving a Continuous Stirred Tank Reactor (CSTR) is provided. The figure below illustrates the CSTR use case within the ASTE Framework:
 
-![CSTR Use Case](figures/CSTR_FlowDiagram.pdf)
+![CSTR Use Case](figures/CSTR_FlowDiagram.png)
 
 This section details the implementation specifics, including code snippets and configurations, to showcase how the ASTE Framework can be utilized in a real-world application.
 
