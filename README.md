@@ -1,3 +1,5 @@
+:construction: Under construction :construction:
+
 # Autonomous Systems Training Environment (ASTE) Framework
 
 ## Overview
@@ -20,11 +22,35 @@ Autonomy in the sense of technical systems represents a system property characte
 
 ## Architecture
 
-The ASTE Framework is built on a robust and flexible architecture that allows for seamless integration with various autonomous systems. The logical architecture is illustrated in the figure below:
+The architecture is based on the lower levels of the control hierarchy: process, regulatory control, advanced process control, supervisory control. In addition, the plant safety levels are assigned to these levels:
+inherent safety, regulatory control, alarms and operator interventions, safety system. The logical architecture is illustrated in the figure below:
 
 ![ASTE Framework Architecture](figures/ASTE_Architecture.png)
 
-The framework is designed to support a modular and extensible structure, making it adaptable to different autonomous applications. The architecture comprises key components for sensor integration, decision-making algorithms, and actuators, facilitating the autonomous operation of process plants.
+The framework is designed to support a modular and extensible structure, making it adaptable to different autonomous applications. It consists of several components, information flows and interfaces, which are described in detail below.
+
+### Simulation Environment with Interface
+On the one hand the environment provides certain values (as feedback) and rewards to the externals and on the other hand accepts control actions from externals. There exist three different control inputs: operator control actions, state-based control actions and regulatory control actions.
+
+### Autonomous Agent with Control Algorithm
+An autonomous agent acts as an external entity/computer system. It inherits a process control algorithm, which should be evaluated using the ASTE framework. It is not part of the ASTE framework, but is depicted in the logical architecture to demonstrate interactions with the framework.
+
+### Simulation Model with Regulatory Control
+This component consists of two sub-components: A model of the controlled process, respectively of the plant executing the process, and a model of the regulatory control of this process/plant. The process/plant model can be either a first-principle, empirical or hybrid model of the process/plant. It mimics process and plant behavior. A regulatory control describes basic control mechanisms based on PID controllers which receive feedback from sensors in the plant (more specifically: from the process/plant simulation model) and executes control actions (e.g., change temperature setpoint).
+
+### Fault Engine
+To test the behavior of control systems in abnormal or unusual situations, it is useful to induce these situations. For this purpose, the fault engine generates randomly generated events that directly influence the
+behavior of the system.
+
+### State-based Control The state-based control
+system component is modeled as a finite state machine with different process states. In addition, start-up and shut-down processes as well as error states should be modeled. Furthermore, a distinction can be made between
+automated and manual (by the operator) control.
+
+### Operator Control
+The operator control model is a human controller reflecting the behavior of a human operator to the plant. This so-called mental modeled is represented by a stochastic finite state machine containing random transitions, different operator types as well as processes for situational awareness.
+
+### Safety Instrumented Functions (SIF)
+The SIF model describes safety instrumented functions from a safety system (parallel to the regular control system). This system only intervenes in very critical situations and activates actuators (also additional actuators) to avoid hazard to man, machine and environment. This can be modeled as a rule-based system with different safety switches being activated when specific thresholds are reached.
 
 ## Implementation
 
@@ -34,11 +60,13 @@ To demonstrate the capabilities of the ASTE Framework, an exemplary use case inv
 
 ![CSTR Use Case](figures/CSTR_FlowDiagram.png)
 
-This section details the implementation specifics, including code snippets and configurations, to showcase how the ASTE Framework can be utilized in a real-world application.
+This section details the implementation specifics, including code snippets and configurations, to showcase how the ASTE Framework can be utilized.
 
 ### Deployment in MATLAB/Simulink
 
-The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments. The deployment process is outlined in the documentation, providing step-by-step instructions for integrating the framework into your MATLAB/Simulink projects.
+The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments. A subsequent implementation using a Python wrapper will be added in the future.
+
+:construction: Under construction :construction:
 
 ## Contributing
 
