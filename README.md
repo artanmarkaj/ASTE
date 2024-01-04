@@ -72,8 +72,4 @@ The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments. A s
 
 We welcome contributions from the community to enhance and expand the capabilities of the ASTE Framework. If you have ideas, bug reports, or feature requests, please open an issue or submit a pull request. 
 
-## License
-
-This project is licensed under the [MIT License](LICENSE), granting you the freedom to use, modify, and distribute the software.
-
 Feel free to explore the repository and leverage the ASTE Framework for your autonomous systems development and training needs!
