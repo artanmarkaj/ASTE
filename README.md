@@ -70,7 +70,7 @@ The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments. A s
 
 ## Contributing
 
-We welcome contributions from the community to enhance and expand the capabilities of the ASTE Framework. If you have ideas, bug reports, or feature requests, please open an issue or submit a pull request. Check out the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information on how to contribute.
+We welcome contributions from the community to enhance and expand the capabilities of the ASTE Framework. If you have ideas, bug reports, or feature requests, please open an issue or submit a pull request. 
 
 ## License
 
