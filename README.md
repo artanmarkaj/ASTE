@@ -1,5 +1,3 @@
-:construction: Under construction :construction:
-
 # Autonomous Systems Training Environment (ASTE) Framework
 
 ## Overview
@@ -66,10 +64,42 @@ This section details the implementation specifics, including code snippets and c
 
 The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments. A subsequent implementation using a Python wrapper will be added in the future.
 
-:construction: Under construction :construction:
+1. **Download the Zip Folder:**
+   - Choose between the more sophisticated version or the simple version of the CSTR, and download the corresponding zip folder.
+
+2. **Open Required Files:**
+   - Open the MATLAB script: `cstrm.m`
+   - Open the plotting script: `cstr_plot.m`
+   - Open the Simulink model: `cstr_simulationEnv.slx`
+
+3. **Load Initialization/Output Data:**
+   - Load the initial data (init_data.mat) and output data (out_data.mat) into the simulation environment.
+
+4. **Set Simulation Time:**
+   - In the Simulink model, set the simulation time (e.g., `1000` for a duration of 1000 seconds).
+
+5. **Choose Simulation Mode:**
+   - Select either **Normal** or **Accelerator** mode. 
+   - *Note: Rapid Accelerator Mode is currently unavailable.*
+
+6. **Activate Faults:**
+   - Navigate to the fault section of the Simulink model and choose which faults you want to activate during the simulation.
+   - ![ASTE Fault Engine Select Fault](figures/ASTE_FaultEngine_SelectFault.png)
+
+7. **Run the Simulation:**
+   - Start the simulation by clicking the 'Run' button in Simulink.
+
+8. **Run the Plot Script:**
+   - After running the simulation, execute the plot script (`cstr_plot.m`).
+   - *Tip: Adjust the axis values for the plots based on your chosen simulation time and other parameters to ensure accurate visualization.*
+
+By following these steps, you'll be able to set up, run, and analyze the CSTR simulation with various fault conditions.
 
 ## Contributing
 
 We welcome contributions from the community to enhance and expand the capabilities of the ASTE Framework. If you have ideas, bug reports, or feature requests, please open an issue or submit a pull request. 
 
 Feel free to explore the repository and leverage the ASTE Framework for your autonomous systems development and training needs!
+
+## Literature
+A. Markaj, M. Mercangöz, A. Fay: Design and implementation of an Autonomous Systems Training Environment framework for control algorithm evaluation in autonomous plant operation. In: Computers & Chemical Engineering, Volume 189, October 2024, 108798. DOI: https://doi.org/10.1016/j.compchemeng.2024.108798
