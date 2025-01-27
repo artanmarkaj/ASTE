@@ -62,7 +62,7 @@ This section details the implementation specifics, including code snippets and c
 
 ### Deployment in MATLAB/Simulink
 
-The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments. A subsequent implementation using a Python wrapper will be added in the future.
+The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments.
 
 1. **Download the Zip Folder:**
    - Choose between the more sophisticated version or the simple version of the CSTR, and download the corresponding zip folder.
@@ -94,6 +94,39 @@ The ASTE Framework is seamlessly deployable in MATLAB/Simulink environments. A s
    - *Tip: Adjust the axis values for the plots based on your chosen simulation time and other parameters to ensure accurate visualization.*
 
 By following these steps, you'll be able to set up, run, and analyze the CSTR simulation with various fault conditions.
+
+### Deployment in Python
+
+The Matlab/Simulink simulation can also be controlled via Python. This enables the implementation of autonomous control algorithms (e.g., using intelligent agents) via Python, in connection to the simulation. It utilizes matlab engine for python, which is imported via 
+```python
+import matlab.engine
+```
+
+1. **Download the Zip Folder:**
+   - Download the python connection zip folder.
+  
+2. **Open Required Files:**
+   - Open the python file: `cstr_python_run_simulation`
+  
+3. **Set Simulation Parameters:**
+   - You can now set different values for the simulation parameters, e.g., activating the safety system or specific faults.
+
+```python
+# Activate safety system
+eng.workspace['SIF_activation'] = 1  # Activate safety system
+
+# Activate operator control
+eng.workspace['operator_control_activation'] = 1  # Activate operator control
+
+# Activate faults
+eng.workspace['fault1'] = 0  # Activate fault 1 ('No Inlet Flow')
+eng.workspace['fault2'] = 0  # Activate fault 2 ('No Outlet Flow')
+eng.workspace['fault3'] = 0  # Activate fault 3 ('No Cooling')
+```
+  
+4. **Run the Simulation:**
+   - Now you can run the python script and observe the results.
+   - Data is saved in 'out_data.mat'
 
 ## Contributing
 
